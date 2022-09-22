@@ -1,0 +1,3 @@
+- `LINQ` is for simple query
+  - pure SQL is better for complex query
+  - always same method even with different databases
