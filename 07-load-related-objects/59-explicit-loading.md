@@ -21,3 +21,17 @@ context.Entry(author).Collection(a => a.Courses).Query().Where(c => c.FullPrice 
 ```
 context.Courses.Where(c => c.AuthorId == author.Id && c.FullPrice == 0).Load();
 ```
+
+# In operator
+
+```
+select *
+from courses
+where AuthorID in (1,2,3)
+```
+
+```
+var author = context.Authors.toList();
+var authorIds = authors.Select(a => a.Id);
+context.Courses.Where(c => authorIds.Contains(c.AuthorId) && c.FullPrice == 0).Load();
+```
