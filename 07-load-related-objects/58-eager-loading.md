@@ -21,7 +21,9 @@ context.Courses.Include(c => c.Author.Address)
 ```
 
 - For collection properties
+  - Tags has no Moderator
+  - use `Select` to access property in list
 
 ```
-context.Courses.Include(a => a.Tags.Select(t => t.moderator))
+context.Courses.Include(a => a.Tags.Select(t => t.Moderator))
 ```
