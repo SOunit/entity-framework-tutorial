@@ -1,0 +1,3 @@
+- lazy loading
+  - console is fake
+  - check actual query using ``
